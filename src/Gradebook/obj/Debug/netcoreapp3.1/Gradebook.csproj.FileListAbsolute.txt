@@ -1,0 +1,13 @@
+/home/steven/Documents/sphereConsultancy/csharpproj/gradebook/src/Gradebook/bin/Debug/netcoreapp3.1/Gradebook
+/home/steven/Documents/sphereConsultancy/csharpproj/gradebook/src/Gradebook/bin/Debug/netcoreapp3.1/Gradebook.deps.json
+/home/steven/Documents/sphereConsultancy/csharpproj/gradebook/src/Gradebook/bin/Debug/netcoreapp3.1/Gradebook.runtimeconfig.json
+/home/steven/Documents/sphereConsultancy/csharpproj/gradebook/src/Gradebook/bin/Debug/netcoreapp3.1/Gradebook.runtimeconfig.dev.json
+/home/steven/Documents/sphereConsultancy/csharpproj/gradebook/src/Gradebook/bin/Debug/netcoreapp3.1/Gradebook.dll
+/home/steven/Documents/sphereConsultancy/csharpproj/gradebook/src/Gradebook/bin/Debug/netcoreapp3.1/Gradebook.pdb
+/home/steven/Documents/sphereConsultancy/csharpproj/gradebook/src/Gradebook/obj/Debug/netcoreapp3.1/Gradebook.csprojAssemblyReference.cache
+/home/steven/Documents/sphereConsultancy/csharpproj/gradebook/src/Gradebook/obj/Debug/netcoreapp3.1/Gradebook.csproj.CoreCompileInputs.cache
+/home/steven/Documents/sphereConsultancy/csharpproj/gradebook/src/Gradebook/obj/Debug/netcoreapp3.1/Gradebook.AssemblyInfoInputs.cache
+/home/steven/Documents/sphereConsultancy/csharpproj/gradebook/src/Gradebook/obj/Debug/netcoreapp3.1/Gradebook.AssemblyInfo.cs
+/home/steven/Documents/sphereConsultancy/csharpproj/gradebook/src/Gradebook/obj/Debug/netcoreapp3.1/Gradebook.dll
+/home/steven/Documents/sphereConsultancy/csharpproj/gradebook/src/Gradebook/obj/Debug/netcoreapp3.1/Gradebook.pdb
+/home/steven/Documents/sphereConsultancy/csharpproj/gradebook/src/Gradebook/obj/Debug/netcoreapp3.1/Gradebook.genruntimeconfig.cache
