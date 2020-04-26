@@ -8,26 +8,17 @@ namespace Gradebook
         static void Main(string[] args)
         {
 
-            var Book = new Book();
-            Book.AddGrade(88.4);
+            var book = new Book("Steven's Grade Book");
+            book.AddGrade(88.4);
+            book.AddGrade(90.6);
+            book.AddGrade(75.2);
+            book.showStatistics();
 
-            List<double> grades = new List<double>() { 14.2, 15.8, 64.0, 10 };
-
-            grades.Add(65.0);
-            grades.Add(95.0);
-            grades.Add(85.0);
-
-            double result = 0;
-
-
-            foreach (double grade in grades)
-            {
-                result += grade;
-            }
-
-            result /= grades.Count;
-
-            Console.WriteLine($"The Average grade is {result:N2}");
+            var book2 = new Book("Angie's Grade Book");
+            book2.AddGrade(87.4);
+            book2.AddGrade(90.7);
+            book2.AddGrade(73.2);
+            book2.showStatistics();
 
         }
     }
