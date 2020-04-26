@@ -8,6 +8,9 @@ namespace Gradebook
         static void Main(string[] args)
         {
 
+            var Book = new Book();
+            Book.AddGrade(88.4);
+
             List<double> grades = new List<double>() { 14.2, 15.8, 64.0, 10 };
 
             grades.Add(65.0);
@@ -26,14 +29,6 @@ namespace Gradebook
 
             Console.WriteLine($"The Average grade is {result:N2}");
 
-            if (args.Length > 0)
-            {
-                Console.WriteLine($"Hello, {args[0]}!");
-            }
-            else
-            {
-                Console.WriteLine("Hello!");
-            }
         }
     }
 }
