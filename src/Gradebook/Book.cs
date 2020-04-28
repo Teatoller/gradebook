@@ -10,9 +10,38 @@ namespace Gradebook
             grades = new List<double>();
             this.Name = name;
         }
+
+        public void AddLetterGrade(char grade)
+        {
+            switch (letter)
+            {
+                case 'A':
+                    AddGrade(90);
+                    break;
+                case 'B':
+                    AddGrade(80);
+                    break;
+                case 'C':
+                    AddGrade(70);
+                    break;
+                case 'D':
+                    AddGrade(60);
+                    break;
+                default:
+                    AddGrade(0);
+                    break;
+            }
+        }
         public void AddGrade(double grade)
         {
-            grades.Add(grade);
+            if (grade <= 100 && grade >= 0)
+            {
+                grades.Add(grade);
+            }
+            else
+            {
+                System.Console.WriteLine("Invalid value");
+            }
         }
 
         public Statistics GetStatistics()
