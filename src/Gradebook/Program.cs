@@ -9,9 +9,20 @@ namespace Gradebook
         {
 
             var book = new Book("Steven's Grade Book");
-            book.AddGrade(88.4);
-            book.AddGrade(90.6);
-            book.AddGrade(75.2);
+
+            while (true)
+            {
+                System.Console.WriteLine("Enter a grade or 'q' to quit");
+                string input = Console.ReadLine();
+
+                if (input == "q")
+                {
+                    break;
+                }
+                double grade = double.Parse(input);
+                book.AddGrade(grade);
+            }
+
 
             var stats = book.GetStatistics();
 
