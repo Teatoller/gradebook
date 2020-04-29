@@ -23,6 +23,7 @@ namespace Gradebook.Tests
             Xunit.Assert.Equal(90.6, result.High, 1);
             Xunit.Assert.Equal(75.2, result.Low, 1);
             Xunit.Assert.Equal(84.7, result.Average, 1);
+            Xunit.Assert.Equal('B', result.Letter);
         }
 
         [Fact]
