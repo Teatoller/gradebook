@@ -40,7 +40,8 @@ namespace Gradebook
             }
             else
             {
-                System.Console.WriteLine("Invalid value");
+                // System.Console.WriteLine("Invalid value");
+                throw new ArgumentException($"Invalid {nameof(grade)}");
             }
         }
 
@@ -89,6 +90,11 @@ namespace Gradebook
         }
 
         private List<double> grades;
-        public string Name;
+
+        public string Name
+        {
+            get; set;
+        }
+        // public string Name;
     }
 }

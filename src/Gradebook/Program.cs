@@ -19,18 +19,27 @@ namespace Gradebook
                 {
                     break;
                 }
-                double grade = double.Parse(input);
-                book.AddGrade(grade);
+                try
+                {
+                    double grade = double.Parse(input);
+                    book.AddGrade(grade);
+                }
+                catch (Exception ex)
+                {
+                    System.Console.WriteLine(ex.Message);
+                }
+
             }
 
-
             var stats = book.GetStatistics();
+            book.Name = "";
 
-            // Console.WriteLine($"Student: {name}");
+            Console.WriteLine($"Student: {book.Name}");
             Console.WriteLine($"The Highest grade is {stats.High:N2}");
             Console.WriteLine($"The Lowest grade is {stats.Low:N2}");
             Console.WriteLine($"The Average grade is {stats.Average:N2}");
             Console.WriteLine($"The Letter grade is {stats.Letter}");
+            Console.WriteLine("**");
 
         }
     }
