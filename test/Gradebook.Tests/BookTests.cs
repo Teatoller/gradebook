@@ -32,10 +32,8 @@ namespace Gradebook.Tests
             // arrage
 
             var book = new Book(" ");
-            book.AddGrade(105.0);
             book.AddGrade(100);
             book.AddGrade(0);
-            book.AddGrade(-5.0);
 
             // act
             var result = book.GetStatistics();
@@ -45,8 +43,6 @@ namespace Gradebook.Tests
             Xunit.Assert.Equal(100.0, result.High, 1);
             Xunit.Assert.Equal(0.0, result.Low, 1);
             Xunit.Assert.Equal(50.0, result.Average, 1);
-            Xunit.Assert.NotEqual(105.0, result.High, 1);
-            Xunit.Assert.NotEqual(-5.0, result.Low, 1);
         }
     }
 }
