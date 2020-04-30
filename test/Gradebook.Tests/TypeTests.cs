@@ -3,8 +3,40 @@ using Xunit;
 
 namespace Gradebook.Tests
 {
+    public delegate string WriteLogDelegate(string LogMessage);
     public class TypeTests
     {
+        int count = 0;
+        [Fact]
+        public void WriteLogDelegateCanPointToMethod()
+        {
+            // arrage
+            WriteLogDelegate log = ReturnMessage;
+
+            log += new WriteLogDelegate(ReturnMessage);
+            log += new WriteLogDelegate(IncrementMessage);
+
+            // log = ReturnMessage;
+
+            var result = log("Hello");
+
+            // assert
+            Xunit.Assert.Equal(3, count);
+
+        }
+
+        string IncrementMessage(string Message)
+        {
+            count += 1;
+            return Message.ToLower();
+        }
+
+        string ReturnMessage(string Message)
+        {
+            count += 1;
+            return Message;
+        }
+
         [Fact]
         public void CsharpCanPassValueByRef()
         {
