@@ -10,7 +10,7 @@ namespace Gradebook.Tests
         {
             // arrage
 
-            var book = new Book(" ");
+            var book = new InMemoryBook(" ");
             book.AddGrade(88.4);
             book.AddGrade(90.6);
             book.AddGrade(75.2);
@@ -31,7 +31,7 @@ namespace Gradebook.Tests
         {
             // arrage
 
-            var book = new Book(" ");
+            var book = new InMemoryBook(" ");
             book.AddGrade(100);
             book.AddGrade(0);
 
