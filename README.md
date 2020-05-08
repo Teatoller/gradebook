@@ -16,5 +16,5 @@ An electronic grade book to read the scores of an individual student and then co
 4. `cd gradebook`
 5. open **gradebook** in your chosen editor. For **vscode** enter `code .` on terminal and press enter.
 6. `git checkout develop`
-7.  `cd src/Gradebook` 
-8. Run `dotnet run`
+7. On the terminal run `dotnet run --project src/Gradebook` 
+8. To run tests on the terminal run `dotnet test`
