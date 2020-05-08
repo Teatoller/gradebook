@@ -3,10 +3,19 @@ using System.Collections.Generic;
 
 namespace Gradebook
 {
-    public class Book
+    public abstract class Book : NameObject
+    {
+        protected Book(string name) : base(name)
+        {
+        }
+
+        public abstract void AddGrade(double grade);
+
+    }
+    public class InMemoryBook : Book
     {
         public delegate void GradeAddedDelegate(object sender, EventArgs args);
-        public Book(string name)
+        public InMemoryBook(string name) : base(name)
         {
             grades = new List<double>();
             this.Name = name;
@@ -33,7 +42,7 @@ namespace Gradebook
                     break;
             }
         }
-        public void AddGrade(double grade)
+        public override void AddGrade(double grade)
         {
             if (grade <= 100 && grade >= 0)
             {
@@ -98,10 +107,5 @@ namespace Gradebook
 
         private List<double> grades;
 
-        public string Name
-        {
-            get; set;
-        }
-        // public string Name;
     }
 }
