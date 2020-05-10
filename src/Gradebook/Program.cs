@@ -8,13 +8,13 @@ namespace Gradebook
         static void Main(string[] args)
         {
 
-            var book = new InMemoryBook("Steven's Grade Book");
+            IBook book = new DiskBook("Steven's Grade Book");
             book.GradeAdded += OnGradeAdded;
 
             EnterGrades(book);
 
             var stats = book.GetStatistics();
-            book.Name = "";
+            // book.Name = "";
 
             Console.WriteLine($"Student: {book.Name}");
             Console.WriteLine($"The Highest grade is {stats.High:N2}");
