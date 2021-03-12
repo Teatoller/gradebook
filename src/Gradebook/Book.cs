@@ -4,16 +4,22 @@ using System.Collections.Generic;
 namespace Gradebook
 {
     public delegate void GradeAddedDelegate(object sender, EventArgs args);
+
     public interface IBook
     {
         void AddGrade(double grade);
+
         Statistics GetStatistics();
+
         string Name { get; }
+
         event GradeAddedDelegate GradeAdded;
     }
+
     public abstract class Book : NameObject, IBook
     {
-        protected Book(string name) : base(name)
+        protected Book(string name) :
+            base(name)
         {
         }
 
@@ -23,9 +29,11 @@ namespace Gradebook
 
         public abstract Statistics GetStatistics();
     }
+
     public class InMemoryBook : Book
     {
-        public InMemoryBook(string name) : base(name)
+        public InMemoryBook(string name) :
+            base(name)
         {
             grades = new List<double>();
             this.Name = name;
@@ -52,11 +60,12 @@ namespace Gradebook
                     break;
             }
         }
+
         public override void AddGrade(double grade)
         {
             if (grade <= 100 && grade >= 0)
             {
-                grades.Add(grade);
+                grades.Add (grade);
 
                 if (GradeAdded != null)
                 {
@@ -80,13 +89,9 @@ namespace Gradebook
                 result.Add(grades[index]);
             }
 
-
-
             return result;
-
         }
 
         private List<double> grades;
-
     }
 }
